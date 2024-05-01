@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01 Mei 2024 pada 22.03
+-- Generation Time: 02 Mei 2024 pada 00.14
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sns_db`
+-- Database: `insta_db`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,9 @@ CREATE TABLE `comment_list` (
 --
 
 INSERT INTO `comment_list` (`id`, `post_id`, `member_id`, `message`, `date_created`, `date_updated`) VALUES
-(12, 17, 3, 'ok', '2024-05-02 02:04:48', '2024-05-02 02:04:48');
+(13, 20, 3, 'So beautifullll', '2024-05-02 04:21:31', '2024-05-02 04:21:31'),
+(15, 23, 6, 'so beautiful', '2024-05-02 04:34:41', '2024-05-02 04:34:41'),
+(16, 24, 3, 'cool mannn', '2024-05-02 04:36:50', '2024-05-02 04:36:50');
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,10 @@ CREATE TABLE `like_list` (
 --
 
 INSERT INTO `like_list` (`post_id`, `member_id`) VALUES
-(17, 3);
+(19, 3),
+(20, 3),
+(23, 6),
+(24, 3);
 
 -- --------------------------------------------------------
 
@@ -86,10 +91,9 @@ CREATE TABLE `member_list` (
 --
 
 INSERT INTO `member_list` (`id`, `firstname`, `middlename`, `lastname`, `email`, `password`, `avatar`, `status`, `date_created`, `date_updated`) VALUES
-(1, 'Mark', 'D', 'Cooper', 'mcooper@sample.com', 'c7162ff89c647f444fcaa5c635dac8c3', 'uploads/member/1.png?v=1651542663', 0, '2022-05-03 09:51:03', '2022-05-03 09:51:03'),
-(2, 'Claire', 'D', 'Blake', 'cblake@sample.com', '4744ddea876b11dcb1d169fadf494418', 'uploads/member/2.png?v=1651559268', 0, '2022-05-03 14:27:48', '2022-05-03 14:27:48'),
 (3, 'yanu', 'arsyah', 'imaduddin', 'yanuar@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'uploads/member/3.png?v=1714510321', 0, '2024-05-01 03:45:29', '2024-05-01 03:52:01'),
-(4, 'oke', 'ye', 'ye', 'oke@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'uploads/member/4.png?v=1714510075', 0, '2024-05-01 03:47:55', '2024-05-01 03:47:55');
+(5, 'Intan', 'Perma', 'Sari', 'Intan@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'uploads/member/5.png?v=1714598048', 0, '2024-05-02 04:14:08', '2024-05-02 04:14:08'),
+(6, 'ilham', 'adi', 'putra', 'ilham@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', 'uploads/member/6.png?v=1714599191', 0, '2024-05-02 04:33:11', '2024-05-02 04:33:11');
 
 -- --------------------------------------------------------
 
@@ -123,9 +127,10 @@ CREATE TABLE `post_list` (
 --
 
 INSERT INTO `post_list` (`id`, `member_id`, `caption`, `upload_path`, `date_created`, `date_updated`) VALUES
-(16, 3, 'njnjnj', 'uploads/posts/202405010006/', '2024-05-01 03:50:47', '2024-05-01 03:50:47'),
-(17, 3, 'ok', 'uploads/posts/202405020001/', '2024-05-02 02:04:25', '2024-05-02 02:04:25'),
-(18, 3, 'okeee', 'uploads/posts/202405020002/', '2024-05-02 02:59:45', '2024-05-02 02:59:45');
+(19, 5, 'Liburan Asikkkk', 'uploads/posts/202405020003/', '2024-05-02 04:15:15', '2024-05-02 04:15:15'),
+(20, 5, 'Felling good', 'uploads/posts/202405020004/', '2024-05-02 04:16:35', '2024-05-02 04:16:35'),
+(23, 3, 'Holiday', 'uploads/posts/202405020001/', '2024-05-02 04:20:48', '2024-05-02 04:20:48'),
+(24, 6, 'Cool', 'uploads/posts/202405020002/', '2024-05-02 04:35:43', '2024-05-02 04:35:43');
 
 -- --------------------------------------------------------
 
@@ -202,19 +207,19 @@ ALTER TABLE `system_info`
 -- AUTO_INCREMENT for table `comment_list`
 --
 ALTER TABLE `comment_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `member_list`
 --
 ALTER TABLE `member_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `post_list`
 --
 ALTER TABLE `post_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `system_info`
